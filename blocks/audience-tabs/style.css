@@ -1,0 +1,116 @@
+.wijhe-audience-tabs {
+	--tabs-bg: color-mix(in srgb, var(--wp--preset--color--surface) 84%, transparent);
+	--tabs-border: color-mix(in srgb, var(--wp--preset--color--primary) 18%, transparent);
+	--tabs-active: var(--wp--preset--color--primary);
+	container-type: inline-size;
+}
+
+.wijhe-audience-tabs__header {
+	margin-bottom: var(--wp--preset--spacing--40);
+}
+
+.wijhe-audience-tabs__eyebrow {
+	color: var(--wp--preset--color--primary);
+	font-size: var(--wp--preset--font-size--small);
+	font-weight: 800;
+	margin: 0 0 .5rem;
+}
+
+.wijhe-audience-tabs__title {
+	font-family: var(--wp--preset--font-family--heading);
+	font-size: var(--wp--preset--font-size--x-large);
+	line-height: 1.05;
+	margin: 0;
+}
+
+.wijhe-audience-tabs__shell {
+	background: var(--tabs-bg);
+	border: 1px solid var(--tabs-border);
+	border-radius: var(--wijhe-radius-card, 28px);
+	box-shadow: var(--wp--preset--shadow--lift);
+	overflow: clip;
+}
+
+.wijhe-audience-tabs__tablist {
+	display: flex;
+	gap: .35rem;
+	overflow-x: auto;
+	padding: .5rem;
+	scrollbar-width: thin;
+}
+
+.wijhe-audience-tabs__tab {
+	appearance: none;
+	background: transparent;
+	border: 0;
+	border-radius: 999px;
+	color: var(--wp--preset--color--contrast);
+	cursor: pointer;
+	font: inherit;
+	font-weight: 800;
+	min-width: max-content;
+	padding: .78rem 1rem;
+}
+
+.wijhe-audience-tabs__tab[aria-selected="true"] {
+	background: var(--tabs-active);
+	box-shadow: 0 12px 30px color-mix(in srgb, var(--tabs-active) 24%, transparent);
+	color: var(--wp--preset--color--base);
+}
+
+.wijhe-audience-tabs__panels {
+	border-top: 1px solid var(--tabs-border);
+	padding: var(--wp--preset--spacing--50);
+}
+
+.wijhe-audience-tabs__panel h3 {
+	font-family: var(--wp--preset--font-family--heading);
+	font-size: var(--wp--preset--font-size--large);
+	line-height: 1.15;
+	margin: 0 0 .75rem;
+}
+
+.wijhe-audience-tabs__panel p {
+	font-size: var(--wp--preset--font-size--medium);
+	margin: 0 0 var(--wp--preset--spacing--40);
+}
+
+.wijhe-audience-tabs__cta {
+	align-items: center;
+	background: color-mix(in srgb, var(--wp--preset--color--secondary) 22%, transparent);
+	border-radius: 999px;
+	color: var(--wp--preset--color--primary);
+	display: inline-flex;
+	font-weight: 800;
+	padding: .72rem 1rem;
+	text-decoration: none;
+}
+
+.wijhe-audience-tabs__cta::after {
+	content: "→";
+	margin-left: .55rem;
+}
+
+@container (min-width: 720px) {
+	.wijhe-audience-tabs__shell {
+		display: grid;
+		grid-template-columns: minmax(180px, .7fr) minmax(0, 1.3fr);
+	}
+
+	.wijhe-audience-tabs__tablist {
+		align-content: start;
+		border-right: 1px solid var(--tabs-border);
+		display: grid;
+		overflow: visible;
+		padding: var(--wp--preset--spacing--30);
+	}
+
+	.wijhe-audience-tabs__tab {
+		text-align: left;
+	}
+
+	.wijhe-audience-tabs__panels {
+		border-top: 0;
+		padding: var(--wp--preset--spacing--60);
+	}
+}

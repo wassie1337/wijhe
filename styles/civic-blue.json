@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Civic blauw",
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "base", "name": "Basis", "color": "#f5f8fb" },
+        { "slug": "contrast", "name": "Tekst", "color": "#111827" },
+        { "slug": "primary", "name": "Primair", "color": "#1d4ed8" },
+        { "slug": "secondary", "name": "Secundair", "color": "#f59e0b" },
+        { "slug": "accent", "name": "Accent", "color": "#be185d" },
+        { "slug": "muted", "name": "Zacht", "color": "#e8eef7" },
+        { "slug": "surface", "name": "Vlak", "color": "#ffffff" }
+      ]
+    }
+  }
+}

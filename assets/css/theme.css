@@ -1,0 +1,69 @@
+:root {
+	--wijhe-radius-card: clamp(1.25rem, 1rem + 1vw, 2rem);
+	--wijhe-focus: 0 0 0 3px color-mix(in srgb, var(--wp--preset--color--secondary) 70%, transparent);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+.wp-site-blocks {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.wp-site-blocks > main {
+	flex: 1;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+	transition: background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+	outline: none;
+	box-shadow: var(--wijhe-focus);
+}
+
+.wp-block-button__link:hover {
+	transform: translateY(-1px);
+}
+
+.wp-block-button.is-style-ghost .wp-block-button__link:hover {
+	background: color-mix(in srgb, var(--wp--preset--color--primary) 9%, transparent);
+}
+
+.is-style-glass-card {
+	backdrop-filter: blur(18px);
+}
+
+.wijhe-kicker {
+	letter-spacing: .12em;
+	text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: .01ms !important;
+		animation-duration: .01ms !important;
+		animation-iteration-count: 1 !important;
+	}
+}

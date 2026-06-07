@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "title": "Bosrijk",
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "base", "name": "Basis", "color": "#f7f5ed" },
+        { "slug": "contrast", "name": "Tekst", "color": "#102019" },
+        { "slug": "primary", "name": "Primair", "color": "#1f5d45" },
+        { "slug": "secondary", "name": "Secundair", "color": "#c8963e" },
+        { "slug": "accent", "name": "Accent", "color": "#7c3d2f" },
+        { "slug": "muted", "name": "Zacht", "color": "#e5eadf" },
+        { "slug": "surface", "name": "Vlak", "color": "#ffffff" }
+      ]
+    }
+  }
+}
