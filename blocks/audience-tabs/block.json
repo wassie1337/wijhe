@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wijhe-studio/audience-tabs",
+  "version": "1.0.0",
+  "title": "Doelgroep tabs",
+  "category": "widgets",
+  "icon": "index-card",
+  "description": "Toon meerdere doelgroepen in toegankelijke tabbladen met eigen tekst en call-to-action.",
+  "keywords": ["tabs", "doelgroepen", "widget"],
+  "textdomain": "wijhe-studio",
+  "attributes": {
+    "eyebrow": { "type": "string", "default": "Doelgroepen" },
+    "title": { "type": "string", "default": "Voor wie is deze pagina?" },
+    "tabs": {
+      "type": "array",
+      "default": [
+        { "label": "Inwoners", "heading": "Alles voor inwoners", "content": "Beschrijf hier de belangrijkste route, voordelen of acties voor deze doelgroep.", "cta": "Lees meer", "url": "#" },
+        { "label": "Ondernemers", "heading": "Voor ondernemers", "content": "Maak duidelijk welke informatie, diensten of vervolgstappen ondernemers kunnen verwachten.", "cta": "Bekijk opties", "url": "#" },
+        { "label": "Bezoekers", "heading": "Welkom bezoekers", "content": "Gebruik compacte teksten en een duidelijke call-to-action per doelgroep.", "cta": "Ontdek meer", "url": "#" }
+      ]
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "color": { "background": true, "text": true },
+    "spacing": { "margin": true, "padding": true },
+    "typography": { "fontSize": true },
+    "interactivity": true
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style.css",
+  "editorStyle": "file:./editor.css",
+  "render": "file:./render.php"
+}
